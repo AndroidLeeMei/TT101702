@@ -3,6 +3,7 @@ package com.test.tt101702;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 /**
  * Created by teacher on 2016/10/17.
@@ -11,7 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class MyDBHelper extends SQLiteOpenHelper {
 
     final static String DB_NAME = "address.sqlite";
-    final static int VERSION = 1;
+    final static int VERSION = 2;
 
     public MyDBHelper(Context context)
     {
@@ -29,6 +30,6 @@ public class MyDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        Log.d("DATA", "This is onUpgrad");
     }
 }
