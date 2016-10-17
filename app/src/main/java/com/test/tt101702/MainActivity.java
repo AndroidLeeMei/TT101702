@@ -12,5 +12,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         MyDBHelper helper = new MyDBHelper(MainActivity.this);
         SQLiteDatabase db = helper.getWritableDatabase();
+        db.execSQL("Insert into phonebook (`Name`, `Tel`, `Addr`) Values (\"AAA\", \"111\", \"AA11aa11\")");
+        db.close();
+
     }
 }
